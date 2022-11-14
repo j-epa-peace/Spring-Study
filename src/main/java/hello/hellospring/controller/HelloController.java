@@ -30,21 +30,46 @@ public class HelloController {
 
     @GetMapping("hello-api")
     @ResponseBody
-    public Hello helloApi(@RequestParam("na") String nas) {
-        Hello hello = new Hello();
-        hello.setName(nas);
+    public Hello2 helloApi(@RequestParam("na") String nass) {
+        Hello2 hello = new Hello2();
+        hello.setSdf(nass);
         return hello;
     }
 
     static class Hello {
-        private String nas;
+        private String nasdfss;
 
         public String getName() {
-            return nas;
+            return nasdfss;
         }
 
-        public void setName(String nas) {
-            this.nas = nas;
+        public void setName(String nass) {
+            this.nasdfss = nass;
+        }
+    }
+
+    static class Hello2 {
+        private String nasdfss;
+        private String sdf;
+        private String name;
+
+        public String getSdf() {
+            return sdf;
+        }
+        public void setSdf(String sdf) {
+            this.sdf = sdf;
+        }
+        public String getNasdfss() {
+            return nasdfss;
+        }
+        public void setNasdfss(String nasdfss) {
+            this.nasdfss = nasdfss;
+        }
+        public String getName() {
+            return name;
+        }
+        public void setName(String nass) {
+            this.name = nass;
         }
     }
 }
