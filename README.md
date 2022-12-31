@@ -171,7 +171,7 @@ DB Config
 > 생성자 하나일 때 @Autowired 생략 가능 
 
 ### JPA
-1. 자바진영에 표준 API 
+1. 자바진영의 표준 API 
 2. 구현은 각 업체에서 진행
 3. ORM(Obeject Relational Mapping)을 Annotation 을 활용하여 구현
 4. JPA 를 사용하면 객체를 가지고 CRUD 를 위한 쿼리를 짤 필요가 없음(단, pk 기반 조회 이외의 쿼리 제외. 스프링데이터 jpa 의 경우에는 pk 기반 CRUD가 아니더라도 가능)
@@ -186,6 +186,10 @@ JPA 로 구성한 repository 가 존재한다면 인터페이스의 상속만으
 ## CH7. AOP(Aspect oriented Programming)
 시간측정과 같이 비지니스 핵심 로직이 아니지만 공통의 관심 사항인 로직들은 비지니스 로직과 섞여 개발했을 때 개발 효율성을 떨어트림.
 이에 공통 관심 사항(cross-cutting concern)과 핵심 관심 사항(core-concern)을 분리하여 개발하는 개발방법론이 AOP.
+
+1. AOP 클래스의 경우 특별한 상황에 사용하는 클래스임으로 컴포넌트 스캔보다는 빈으로 등록하여 별도로 관리
+2. `@Around` Annotation 을 통해 패키지 단위에서부터 클래스 단위까지 지정하여 관리 가능
+
 
 ## keymap
 1. command + shift + 방향키 : 줄바꿈
